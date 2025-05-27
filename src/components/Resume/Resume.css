@@ -1,0 +1,78 @@
+/* Resume.css */
+.resume-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #020f22;
+  color: #ffffff;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.resume-section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #07aecf;
+  position: relative;
+}
+
+.resume-section h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #07aecf;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+.resume-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.resume-column {
+  background-color: #07192f;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(7, 174, 204, 0.5);
+}
+
+.resume-column h3 {
+  color: #07aecf;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.resume-item {
+  margin-bottom: 20px;
+}
+
+.resume-item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.resume-item span {
+  display: block;
+  font-size: 14px;
+  color: #9fa4b1;
+  margin-bottom: 10px;
+}
+
+.resume-item p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
