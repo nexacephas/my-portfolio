@@ -17,8 +17,9 @@ const portfolioProjects = [
     live: 'https://educitycollege.netlify.app',
   },
   {
-    title: 'LinkedIn Clone',
-    image: project_2,
+  
+  title: 'LinkedIn Clone',
+  image: project_2,
     description: 'A LinkedIn-style professional network interface built with React and Firebase for authentication.',
     github: 'https://github.com/nexacephas/linkedin-clone',
     live: 'https://linkedin-nexa.netlify.app',
