@@ -2,7 +2,7 @@ import React from 'react';
 import './Portfoilo.css';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import project_1 from '../../assets/Project-1.png';
-import project_2 from '../../assets/Project-2.png';
+/* import project_2 from '../../assets/Project-2.png';  */
 import project_3 from '../../assets/Project-3.png';
 import project_4 from '../../assets/Project-4.png';
 import project_5 from '../../assets/Project-5.png';
@@ -19,7 +19,7 @@ const portfolioProjects = [
   {
   
   title: 'LinkedIn Clone',
-  image: project_2,
+  image: project_3,
     description: 'A LinkedIn-style professional network interface built with React and Firebase for authentication.',
     github: 'https://github.com/nexacephas/linkedin-clone',
     live: 'https://linkedin-nexa.netlify.app',
