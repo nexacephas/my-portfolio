@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,10 +34,16 @@ const Navbar = () => {
       <div className="nav-left">
         <img src={logo} alt="logo" className="logo" />
       </div>
-      <div className="nav-middle">
+
+      {/* Hamburger Icon */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <div className={`nav-middle ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-list">
           {['home', 'about', 'skills', 'services', 'resume', 'portfolio', 'blog', 'contact'].map((section) => (
-            <li key={section}>
+            <li key={section} onClick={() => setMenuOpen(false)}>
               <a
                 href={`#${section}`}
                 className={activeSection === section ? 'active-link' : ''}
@@ -46,8 +54,9 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
+
       <div className="nav-right">
-        <button className="btn"> <a href="#contact">Contact</a></button>
+        <button className="btn"><a href="#contact">Contact</a></button>
       </div>
     </div>
   );

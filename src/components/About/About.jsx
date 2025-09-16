@@ -36,7 +36,10 @@ const About = () => {
           </div>
         </div>
 
-        <button className="btn">Download CV</button>
+        <a href="/Nexa Resume.pdf" download className="btn">
+  Download CV
+</a>
+
       </div>
     </div>
   );
