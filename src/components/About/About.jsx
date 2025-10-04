@@ -36,7 +36,7 @@ const About = () => {
           </div>
         </div>
 
-        <a href="/Nexa Resume.pdf" download className="btn">
+        <a href="/nexa new resume.pdf" download className="btn">
   Download CV
 </a>
 
