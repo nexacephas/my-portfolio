@@ -3,9 +3,9 @@ import './Portfoilo.css';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import project_1 from '../../assets/Project-1.png';
 import project_2 from '../../assets/project-2.png'; 
-import project_3 from '../../assets/Project-3.png';
-import project_4 from '../../assets/Project-4.png';
-import project_5 from '../../assets/Project-5.png';
+import project_3 from '../../assets/project-3.png';
+import project_4 from '../../assets/project-4.png';
+import project_5 from '../../assets/project-5.png';
 import project_6 from '../../assets/project-6.jpg';
 
 const portfolioProjects = [
