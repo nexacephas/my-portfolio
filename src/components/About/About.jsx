@@ -1,48 +1,76 @@
-import React from 'react';
-import './About.css';
-import { FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBriefcase, FaBirthdayCake, FaGlobe, FaLinkedin } from 'react-icons/fa';
-import profile_pic from '../../assets/my-profile-pic.jpg';
+import "./About.css";
+import profilePic from "../../assets/my-profile-pic.jpg";
+import {
+  FaMapMarkerAlt,
+  FaBriefcase,
+  FaGlobe,
+  FaLinkedin,
+} from "react-icons/fa";
 
-const About = () => {
+export default function About() {
   return (
-    <div className='about' id='about'>
-      <div className="about-left">
-        <img src={profile_pic} alt="Nexa Cephas" />
-      </div>
-
-      <div className="about-right">
-        <h2>Discover</h2>
-        <h1>About Me</h1>
-        <p>
-          Hi, I'm a passionate Full Stack Web Developer who specializes in building modern,
-          responsive, and user-friendly web applications. I combine strong frontend and backend
-          skills to craft clean, scalable, and maintainable solutions. I enjoy solving complex
-          problems and collaborating on projects that deliver real value.
-        </p>
-
-        <div className="about-box">
-          <div className="box-left">
-            <p><FaUser /> <span>Name</span>: Nexa Cephas</p>
-            <p><FaPhoneAlt /> <span>Phone</span>: +234 813 149 5622</p>
-            <p><FaBriefcase /> <span>Experience</span>: 3 years</p>
-            <p><FaEnvelope /> <span>Mail</span>: preciousayo773@gmail.com</p>
-          </div>
-
-          <div className="box-right">
-            <p><FaBirthdayCake /> <span>Age</span>: 20</p>
-            <p><FaMapMarkerAlt /> <span>Address</span>: Minna, Nigeria</p>
-            <p><FaGlobe /> <span>Freelance</span>: Available</p>
-            <p><FaLinkedin /> <span>LinkedIn</span>: Nexa cephas</p>
-          </div>
+    <section className="about" id="about">
+      <div className="about-container">
+        {/* Image */}
+        <div className="about-image">
+          <div className="image-frame" />
+          <img src={profilePic} alt="Nexa Cephas" />
         </div>
 
-        <a href="/nexa new resume.pdf" download className="btn">
-  Download CV
-</a>
+        {/* Content */}
+        <div className="about-content">
+          <span className="section-tag">About Me</span>
+          <h2>Crafting digital experiences that matter</h2>
 
+          <p>
+            I’m <strong>Cephas (Nexa)</strong>, a full stack web developer with
+            over <strong>3 years</strong> of experience building scalable,
+            performant, and visually refined applications.
+          </p>
+
+          <p>
+            I specialize in turning complex ideas into clean, user-focused
+            products — from frontend interfaces to backend systems that scale.
+          </p>
+
+          {/* Highlights */}
+          <div className="about-stats">
+            <div className="stat">
+              <FaBriefcase />
+              <span>3+ Years Experience</span>
+            </div>
+
+            <div className="stat">
+              <FaMapMarkerAlt />
+              <span>Minna, Nigeria</span>
+            </div>
+
+            <div className="stat">
+              <FaGlobe />
+              <span>Freelance Available</span>
+            </div>
+
+            <div className="stat">
+              <FaLinkedin />
+              <span>LinkedIn Profile</span>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="about-actions">
+            <a
+              href="/nexa new resume.pdf"
+              download
+              className="btn primary"
+            >
+              Download CV
+            </a>
+            <a href="#contact" className="btn outline">
+              Let’s Work Together
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default About;
+}

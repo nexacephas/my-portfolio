@@ -1,6 +1,7 @@
 import React from 'react';
 import './Resume.css';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const education = [
   {
@@ -37,35 +38,62 @@ const experience = [
 ];
 
 const Resume = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <div className="resume-section" id='resume'>
+    <div className="resume-section" id="resume">
       <h2>My Resume</h2>
       <div className="resume-container">
         <div className="resume-column">
           <h3>Education</h3>
           {education.map((item, index) => (
-            <div className="resume-item" key={index}>
-              <div className="resume-icon">{item.icon}</div>
+            <motion.div
+              className="resume-item"
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              variants={fadeUp}
+            >
+              <div className="resume-icon-wrapper">
+                <div className="resume-icon-bg" />
+                <div className="resume-icon">{item.icon}</div>
+              </div>
               <div className="resume-content">
                 <h4>{item.title}</h4>
                 <h5>{item.institution} | {item.year}</h5>
                 <p>{item.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         <div className="resume-column">
           <h3>Experience</h3>
           {experience.map((item, index) => (
-            <div className="resume-item" key={index}>
-              <div className="resume-icon">{item.icon}</div>
+            <motion.div
+              className="resume-item"
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              variants={fadeUp}
+            >
+              <div className="resume-icon-wrapper">
+                <div className="resume-icon-bg" />
+                <div className="resume-icon">{item.icon}</div>
+              </div>
               <div className="resume-content">
                 <h4>{item.title}</h4>
                 <h5>{item.company} | {item.year}</h5>
                 <p>{item.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
